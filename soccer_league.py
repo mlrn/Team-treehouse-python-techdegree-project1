@@ -35,21 +35,24 @@ def create_teams(players):
     
 def write_letter(teams):    
     for player in teams[0]:
-        with open(player["Name"] + " guardians letter.txt", "w") as file:
+        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+            file.write("Dear Reader,\n")            
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name} player, whose guardians are {Guardian Name(s)}, has been assigned to team Dragons.\n".format(**player))
             file.write("The team practice date is March 17 at 1 pm.\n")
             file.write("See you then!")
     
     for player in teams[1]:    
-        with open(player["Name"] + " guardians letter.txt", "w") as file:
+        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+            file.write("Dear Reader,\n") 
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name}, whose guardians are {Guardian Name(s)}, has been assigned to team Sharks.\n".format(**player))
             file.write("The team practice date is March 17 at 3 pm.\n")
             file.write("See you then!")
         
     for player in teams[2]:         
-        with open(player["Name"] +" guardians letter.txt", "w") as file:
+        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+            file.write("Dear Reader,\n") 
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name}, whose guardians are {Guardian Name(s)}, has been assigned to team Raptors.\n".format(**player))
             file.write("The team practice date is March 18 at 1 pm.\n")
