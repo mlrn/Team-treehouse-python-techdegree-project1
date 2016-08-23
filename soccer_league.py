@@ -35,7 +35,7 @@ def create_teams(players):
     
 def write_letter(teams):    
     for player in teams[0]:
-        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+        with open("_".join(player["Name"].split( )).lower() + ".txt", "w") as file:
             file.write("Dear Reader,\n")            
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name} player, whose guardians are {Guardian Name(s)}, has been assigned to team Dragons.\n".format(**player))
@@ -43,7 +43,7 @@ def write_letter(teams):
             file.write("See you then!")
     
     for player in teams[1]:    
-        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+        with open("_".join(player["Name"].split( )).lower() + ".txt", "w") as file:
             file.write("Dear Reader,\n") 
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name}, whose guardians are {Guardian Name(s)}, has been assigned to team Sharks.\n".format(**player))
@@ -51,7 +51,7 @@ def write_letter(teams):
             file.write("See you then!")
         
     for player in teams[2]:         
-        with open("_".join(player["Name"].split( )) + ".txt", "w") as file:
+        with open("_".join(player["Name"].split( )).lower() + ".txt", "w") as file:
             file.write("Dear Reader,\n") 
             file.write("On behalf of this year childrens soccer league association, we inform you that ")
             file.write("{Name}, whose guardians are {Guardian Name(s)}, has been assigned to team Raptors.\n".format(**player))
